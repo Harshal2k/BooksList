@@ -10,7 +10,7 @@ function ShowBookDetails() {
   const navigate= useNavigate()
   let bookId = location.pathname.replace('/show-book/', '')
   useEffect(() => {
-    axios.get('http://localhost:8082/api/books/'+bookId)
+    axios.get('https://booklist-7avv.onrender.com/api/books/'+bookId)
     .then(function (response) {
       //console.log(response.data)
       //setbookDetail(response.data)
@@ -25,7 +25,7 @@ function ShowBookDetails() {
 
   const onDeleteClick=()=>{
     axios
-    .delete('http://localhost:8082/api/books/'+bookId)
+    .delete('https://booklist-7avv.onrender.com/api/books/'+bookId)
     .then(res => {
       navigate('/')
     })

@@ -7,7 +7,7 @@ import BookCard from './BookCard';
 function ShowBookList() {
 const [books,setbooks]=useState('')
   useEffect(() => {
-    axios.get('http://localhost:8082/api/books')
+    axios.get('https://booklist-7avv.onrender.com/api/books')
     .then(function (response) {
       //console.log(response.data)
       setbooks(response.data)

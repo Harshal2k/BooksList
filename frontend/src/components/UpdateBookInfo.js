@@ -19,7 +19,7 @@ function UpdateBookInfo() {
   const location = useLocation();
   let bookId = location.pathname.replace('/edit-book/', '')
   useEffect(() => {
-    axios.get('http://localhost:8082/api/books/'+bookId)
+    axios.get('https://booklist-7avv.onrender.com/api/books/'+bookId)
     .then(function (response) {
       //console.log(response.data)
       //setbookDetail(response.data)
@@ -47,7 +47,7 @@ function UpdateBookInfo() {
       publisher: publisher
     }
   
-    axios.put('http://localhost:8082/api/books/'+bookId, data)
+    axios.put('https://booklist-7avv.onrender.com/api/books/'+bookId, data)
   .then(function (response) {
     console.log(response);
     navigate('/')

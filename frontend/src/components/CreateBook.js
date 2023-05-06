@@ -23,7 +23,7 @@ function CreateBook() {
       publisher: publisher
     }
   
-    axios.post('http://localhost:8082/api/books', data)
+    axios.post('https://booklist-7avv.onrender.com/api/books', data)
   .then(function (response) {
    // console.log(response);
     navigate('/')
